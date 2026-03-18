@@ -1,0 +1,280 @@
+.
+├── __pycache__
+│   ├── data_processor.cpython-311.pyc
+│   ├── event_queue.cpython-311.pyc
+│   └── main.cpython-311.pyc
+├── app.py
+├── bcc-check.py
+├── data_collection
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── collectors.cpython-311.pyc
+│   │   ├── collectors.cpython-36.pyc
+│   │   └── utils.cpython-311.pyc
+│   ├── collectors.py
+│   ├── data
+│   │   ├── drive_control.log
+│   │   ├── eguardian.log
+│   │   ├── file_collected_data.json
+│   │   └── net_collected_data.json
+│   ├── ebpf_programs
+│   │   ├── bcc
+│   │   │   ├── cmake
+│   │   │   │   ├── bump_version.cmake
+│   │   │   │   ├── clang_libs.cmake
+│   │   │   │   ├── CmakeUninstall.cmake.in
+│   │   │   │   ├── FindCompilerFlag.cmake
+│   │   │   │   ├── FindKernelHeaders.cmake
+│   │   │   │   ├── FindLibBpf.cmake
+│   │   │   │   ├── FindLibDebuginfod.cmake
+│   │   │   │   ├── FindLibElf.cmake
+│   │   │   │   ├── FindLibLzma.cmake
+│   │   │   │   ├── FindLuaJIT.cmake
+│   │   │   │   ├── GetGitRevisionDescription.cmake
+│   │   │   │   ├── GetGitRevisionDescription.cmake.in
+│   │   │   │   ├── static_libstdc++.cmake
+│   │   │   │   └── version.cmake
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── CODEOWNERS
+│   │   │   ├── CONTRIBUTING-SCRIPTS.md
+│   │   │   ├── debian
+│   │   │   │   ├── bcc-lua.install
+│   │   │   │   ├── bcc-tools.install
+│   │   │   │   ├── changelog
+│   │   │   │   ├── compat
+│   │   │   │   ├── control
+│   │   │   │   ├── copyright
+│   │   │   │   ├── docs
+│   │   │   │   ├── libbcc-examples.install
+│   │   │   │   ├── libbcc.install
+│   │   │   │   ├── python-bcc.install
+│   │   │   │   ├── rules
+│   │   │   │   └── source
+│   │   │   │       └── format
+│   │   │   ├── docker
+│   │   │   │   ├── build
+│   │   │   │   │   ├── Dockerfile.fedora
+│   │   │   │   │   └── Dockerfile.ubuntu
+│   │   │   │   ├── Dockerfile.debian
+│   │   │   │   └── Dockerfile.ubuntu
+│   │   │   ├── docs
+│   │   │   │   ├── kernel_config.md
+│   │   │   │   ├── kernel-versions.md
+│   │   │   │   ├── reference_guide.md
+│   │   │   │   ├── special_filtering.md
+│   │   │   │   ├── tutorial_bcc_python_developer.md
+│   │   │   │   └── tutorial.md
+│   │   │   ├── examples
+│   │   │   │   ├── cgroupid
+│   │   │   │   │   ├── cgroupid.c
+│   │   │   │   │   ├── Dockerfile
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── cpp
+│   │   │   │   │   ├── CGroupTest.cc
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── CPUDistribution.cc
+│   │   │   │   │   ├── FollyRequestContextSwitch.cc
+│   │   │   │   │   ├── HelloWorld.cc
+│   │   │   │   │   ├── KFuncExample.cc
+│   │   │   │   │   ├── KModRetExample.cc
+│   │   │   │   │   ├── LLCStat.cc
+│   │   │   │   │   ├── pyperf
+│   │   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   │   ├── Py36Offsets.cc
+│   │   │   │   │   │   ├── PyPerf.cc
+│   │   │   │   │   │   ├── PyPerfBPFProgram.cc
+│   │   │   │   │   │   ├── PyPerfDefaultPrinter.cc
+│   │   │   │   │   │   ├── PyPerfDefaultPrinter.h
+│   │   │   │   │   │   ├── PyPerfLoggingHelper.cc
+│   │   │   │   │   │   ├── PyPerfLoggingHelper.h
+│   │   │   │   │   │   ├── PyPerfSampleProcessor.h
+│   │   │   │   │   │   ├── PyPerfType.h
+│   │   │   │   │   │   ├── PyPerfUtil.cc
+│   │   │   │   │   │   └── PyPerfUtil.h
+│   │   │   │   │   ├── RandomRead.cc
+│   │   │   │   │   ├── RecordMySQLQuery.cc
+│   │   │   │   │   ├── SkLocalStorageIterator.cc
+│   │   │   │   │   ├── TaskIterator.cc
+│   │   │   │   │   ├── TCPSendStack.cc
+│   │   │   │   │   └── UseExternalMap.cc
+│   │   │   │   ├── hello_world.py
+│   │   │   │   ├── local_storage
+│   │   │   │   │   ├── inode_storage.py
+│   │   │   │   │   └── task_storage.py
+│   │   │   │   ├── lua
+│   │   │   │   │   ├── bashreadline.c
+│   │   │   │   │   ├── bashreadline.lua
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── kprobe-latency.lua
+│   │   │   │   │   ├── kprobe-write.lua
+│   │   │   │   │   ├── memleak.lua
+│   │   │   │   │   ├── offcputime.lua
+│   │   │   │   │   ├── sock-parse-dns.lua
+│   │   │   │   │   ├── sock-parse-http.lua
+│   │   │   │   │   ├── sock-proto.lua
+│   │   │   │   │   ├── sock-protolen.lua
+│   │   │   │   │   ├── strlen_count.lua
+│   │   │   │   │   ├── task_switch.lua
+│   │   │   │   │   ├── tracepoint-offcputime.lua
+│   │   │   │   │   ├── uprobe-readline-perf.lua
+│   │   │   │   │   ├── uprobe-readline.lua
+│   │   │   │   │   ├── uprobe-tailkt.lua
+│   │   │   │   │   └── usdt_ruby.lua
+│   │   │   │   └── networking
+│   │   │   │       ├── CMakeLists.txt
+│   │   │   │       ├── distributed_bridge
+│   │   │   │       │   ├── CMakeLists.txt
+│   │   │   │       │   ├── main.py
+│   │   │   │       │   ├── tunnel_mesh.c
+│   │   │   │       │   ├── tunnel_mesh.py
+│   │   │   │       │   ├── tunnel.c
+│   │   │   │       │   └── tunnel.py
+│   │   │   │       ├── dns_matching
+│   │   │   │       │   ├── dns_matching.c
+│   │   │   │       │   └── dns_matching.py
+│   │   │   │       ├── http_filter
+│   │   │   │       │   ├── CMakeLists.txt
+│   │   │   │       │   ├── http-parse-complete.c
+│   │   │   │       │   ├── http-parse-complete.py
+│   │   │   │       │   ├── http-parse-simple.c
+│   │   │   │       │   ├── http-parse-simple.py
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── neighbor_sharing
+│   │   │   │       │   ├── CMakeLists.txt
+│   │   │   │       │   ├── README.txt
+│   │   │   │       │   ├── tc_neighbor_sharing.c
+│   │   │   │       │   └── tc_neighbor_sharing.py
+│   │   │   │       ├── net_monitor.py
+│   │   │   │       ├── simple_tc.py
+│   │   │   │       ├── simulation.py
+│   │   │   │       ├── sockmap.py
+│   │   │   │       ├── tc_perf_event.py
+│   │   │   │       ├── tcp_mon_block
+│   │   │   │       │   ├── README.md
+│   │   │   │       │   ├── screenshots
+│   │   │   │       │   │   ├── 1.JPG
+│   │   │   │       │   │   └── 2.JPG
+│   │   │   │       │   └── src
+│   │   │   │       │       ├── allow_list.json
+│   │   │   │       │       ├── http_client.py
+│   │   │   │       │       ├── tcp_mon_block.c
+│   │   │   │       │       ├── tcp_mon_block.py
+│   │   │   │       │       └── web_server.py
+│   │   │   │       └── tunnel_monitor
+│   │   │   │           ├── chord.png
+│   │   │   │           ├── CMakeLists.txt
+│   │   │   │           ├── main.py
+│   │   │   │           ├── monitor.c
+│   │   │   │           ├── monitor.py
+│   │   │   │           ├── README.md
+│   │   │   │           └── setup.sh
+│   │   │   ├── FAQ.txt
+│   │   │   ├── INSTALL.md
+│   │   │   ├── LICENSE.txt
+│   │   │   ├── LINKS.md
+│   │   │   ├── QUICKSTART.md
+│   │   │   ├── README.md
+│   │   │   └── SPECS
+│   │   │       ├── bcc.spec
+│   │   │       ├── bcc+clang.spec
+│   │   │       └── Dockerfile.fedora
+│   │   ├── file_monitor.bpf.c
+│   │   ├── net_monitor.bpf.c
+│   │   ├── saida.txt
+│   │   ├── teste_file.py
+│   │   ├── teste_net.py
+│   │   └── vmlinux.h
+│   ├── file_monitor
+│   │   ├── __pycache__
+│   │   │   └── file_monitor.cpython-311.pyc
+│   │   ├── file_monitor.py
+│   │   ├── separate_ebpfs
+│   │   │   ├── capset.c
+│   │   │   ├── do_execve.c
+│   │   │   ├── do_fork.c
+│   │   │   ├── mon_module.c
+│   │   │   ├── security_file_mmap.c
+│   │   │   ├── security_inodes.c
+│   │   │   ├── setuid_setgid.c
+│   │   │   ├── sys_exit.c
+│   │   │   ├── vfs_mkdir.c
+│   │   │   ├── vfs_open.c
+│   │   │   ├── vfs_read.c
+│   │   │   ├── vfs_rename.c
+│   │   │   ├── vfs_rmdir.c
+│   │   │   ├── vfs_unlink.c
+│   │   │   └── vfs_write.c
+│   │   └── teste_file_monitor.py
+│   └── net_monitor
+│       ├── __pycache__
+│       │   └── net_monitor.cpython-311.pyc
+│       ├── net_monitor.py
+│       └── separate_ebpfs
+│           ├── inet_sock_create.c
+│           ├── ip_receive.c
+│           ├── ip_send_skb.c
+│           ├── socket_bind.c
+│           ├── socket_connect.c
+│           ├── socket_create.c
+│           ├── tcp_close.c
+│           ├── tcp_set_state.c
+│           ├── tcp_v4_connect.c
+│           ├── udp_recvmsg.c
+│           └── udp_sendmsg.c
+├── data_processing
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── adfa_preprocessor.cpython-311.pyc
+│   │   └── nsl_preprocessor.cpython-311.pyc
+│   ├── adfa_preprocessor.py
+│   └── nsl_preprocessor.py
+├── data_processor.py
+├── incident_response
+├── machine_learning
+│   ├── __pycache__
+│   │   ├── model_predictor.cpython-311.pyc
+│   │   └── model_predictor.cpython-36.pyc
+│   └── model_predictor.py
+├── main.py
+├── models
+│   ├── modelos_adfa_ld.pkl
+│   ├── modelos_nsl_kdd.pkl
+│   ├── nsl_teste.py
+│   └── nsl.py
+├── static
+│   ├── assets
+│   │   └── img
+│   │       └── CTM.svg
+│   └── CTM_pb.svg
+├── structure.txt
+├── templates
+│   └── index.html
+├── Teste
+│   ├── adfa_encoder.pkl
+│   ├── adfa_model.pkl
+│   ├── adfa_vectorizer.pkl
+│   ├── attack.json
+│   ├── file_collected_data.json
+│   ├── nsl_encoder.pkl
+│   ├── nsl_model.pkl
+│   ├── nsl_selector.pkl
+│   ├── teste_adfa.py
+│   └── UVD-0001.txt
+└── user_interface
+    ├── __pycache__
+    │   ├── accumulated_stats.cpython-311.pyc
+    │   ├── accumulated_stats.cpython-36.pyc
+    │   ├── sliding_window.cpython-311.pyc
+    │   ├── sliding_window.cpython-36.pyc
+    │   ├── terminal_dashboard_curses.cpython-311.pyc
+    │   ├── terminal_dashboard_textual.cpython-311.pyc
+    │   ├── terminal_dashboard_urwid.cpython-311.pyc
+    │   └── terminal_dashboard.cpython-311.pyc
+    ├── accumulated_stats.py
+    ├── sliding_window.py
+    └── terminal_dashboard_curses.py
+
+48 directories, 230 files

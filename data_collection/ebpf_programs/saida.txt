@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/darioza/eguardian/data_collection/ebpf_programs/teste_file.py", line 1, in <module>
+    from bcc import BPF
+  File "/usr/lib/python3/dist-packages/bcc/__init__.py", line 27, in <module>
+    from .libbcc import lib, bcc_symbol, bcc_symbol_option, bcc_stacktrace_build_id, _SYM_CB_TYPE
+  File "/usr/lib/python3/dist-packages/bcc/libbcc.py", line 20, in <module>
+    lib.bpf_module_create_b.restype = ct.c_void_p
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 387, in __getattr__
+    func = self.__getitem__(name)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 392, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+AttributeError: /lib/x86_64-linux-gnu/libbcc.so.0: undefined symbol: bpf_module_create_b

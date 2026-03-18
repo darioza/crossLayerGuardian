@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "Se você usar este software, por favor cite-o conforme os metadados abaixo."
+type: software
+title: "CrossLayerGuardian: Arquitetura eBPF para Correlação Cross-layer em Sistemas de Detecção de Intrusão"
+authors:
+  - family-names: Arioza
+    given-names: Daniel
+    affiliation: "Programa de Pós-Graduação em Computação (PPGC), Universidade Federal do Rio Grande do Sul (UFRGS)"
+date-released: 2026-03-17
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/darioza/crossLayerGuardian"
+abstract: >
+  Implementação do CrossLayerGuardian — primeira arquitetura eBPF com correlação
+  PID-flow sub-10µs entre domínios HIDS/NIDS. O sistema utiliza programas eBPF
+  (XDP + kprobes VFS) para captura de eventos em kernel space, correlação
+  cross-layer com sincronização TSC de 2,3 µs e ensemble adaptativo
+  XGBoost + MLP (F1-score 0,947) para classificação de ameaças em tempo real.
+keywords:
+  - eBPF
+  - intrusion detection system
+  - cross-layer correlation
+  - XDP
+  - machine learning
+  - cybersecurity
+  - HIDS
+  - NIDS
+  - TSC synchronization
+preferred-citation:
+  type: thesis
+  authors:
+    - family-names: Arioza
+      given-names: Daniel
+  title: "CrossLayerGuardian: Arquitetura eBPF para Correlação Cross-layer em Sistemas de Detecção de Intrusão"
+  institution:
+    name: "Universidade Federal do Rio Grande do Sul"
+    department: "Programa de Pós-Graduação em Computação"
+  thesis-type: "Dissertação de Mestrado"
+  year: 2026
+  city: "Porto Alegre"
+  country: BR
